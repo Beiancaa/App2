@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+<div id="enrollments">
+
+  <h1>Enrollments</h1>
+
+  <div id="students">
+    <table border="2">
+      <tr>
+        <th>Student</th>
+        <th>Subject</th>
+        <th>Date</th>
+      </tr>
+      <% @enrollments.each do |enrollment| %>
+      <tr>
+        <td><%= enrollment.name%></td>
+        <td><%= enrollment.Subject %></td>
+        <td><%= enrollment.date %></td>
+        <td><%= link_to "Show", enrollment %></td>
+      </tr>
+    <% end %>
+   </<table>
+ </<div>
+
+<br>
+
+<%= button_to "New enrollment", new_enrollment_path, method: "get" %>

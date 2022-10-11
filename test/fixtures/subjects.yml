@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  open: false
+  name: MyString
+  year: MyString
+  semister: 1
+  teacher: one
+
+two:
+  open: false
+  name: MyString
+  year: MyString
+  semister: 1
+  teacher: two

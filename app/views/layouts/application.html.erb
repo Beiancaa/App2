@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div id="nav">
+      <%= link_to_unless_current "Students",  :controller => "students",
+                                          :action => "index" %> |
+      <%= link_to_unless_current "Teachers", :controller => "teachers",
+                                          :action => "index" %> |
+      <%= link_to_unless_current "Users",  :controller => "users",
+                                          :action => "index" %>|
+      <%= link_to_unless_current "Enrollments",  :controller => "enrollments",
+                                            :action => "index" %>
+      <%= link_to_unless_current "Subjects",  :controller => "subjects",
+                                            :action => "index" %>
+
+    </div>
+    <center>
+    <%= yield %>
+    </center>
+  </body>
+</html>

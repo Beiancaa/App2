@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Students</h1>
+
+<div id="students">
+  <table border="2">
+    <tr>
+      <th>User</th>
+      <th>Level</th>
+    </tr>
+  <% @students.each do |student| %>
+  <tr>
+    <td><%= student.user%></td>
+    <td><%= student.level %></td>
+    <td><%= link_to "Show", student %></td>
+  </tr>
+  <% end %>
+</div>
+
+<%= button_to "New student", new_student_path, method: "get" %>

@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Subjects</h1>
+
+<div id="subjects">
+  <table border="2">
+    <tr>
+      <th>Open</th>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Semister</th>
+      <th>Teacher</th>
+    </tr>
+  <% @subjects.each do |subject| %>
+    <tr>
+      <td><%= subject.open%></td>
+      <td><%= subject.name %></td>
+      <td><%= subject.year %></td>
+      <td><%= subject.semister %></td>
+      <td><%= subject.teacher %></td>
+      <td><%= link_to "Show", subject %></td>
+    </tr>
+  <% end %>
+</div>
+
+<%= button_to "New subject", new_subject_path, method: "get" %>

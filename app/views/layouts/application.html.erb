@@ -11,21 +11,9 @@
   </head>
 
   <body>
-    <div id="nav">
-      <%= link_to_unless_current "Students",  :controller => "students",
-                                          :action => "index" %> |
-      <%= link_to_unless_current "Teachers", :controller => "teachers",
-                                          :action => "index" %> |
-      <%= link_to_unless_current "Users",  :controller => "users",
-                                          :action => "index" %>|
-      <%= link_to_unless_current "Enrollments",  :controller => "enrollments",
-                                            :action => "index" %>
-      <%= link_to_unless_current "Subjects",  :controller => "subjects",
-                                            :action => "index" %>
-
+    <%= render "/layouts/navbar" %>
+    <div class="container-fluid">
+        <%= yield %>
     </div>
-    <center>
-    <%= yield %>
-    </center>
   </body>
 </html>

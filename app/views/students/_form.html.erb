@@ -13,14 +13,15 @@
 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%# form.text_field :user_id %>
+    <%= form.collection_select :user_id, User.all,:id,:name, include_blank: true %>
   </div>
 
   <div>
     <%= form.label :level, style: "display: block" %>
     <%= form.number_field :level %>
   </div>
-
+  <br>
   <div>
     <%= form.submit %>
   </div>

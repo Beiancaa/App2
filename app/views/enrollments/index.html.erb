@@ -3,24 +3,22 @@
 
   <h1>Enrollments</h1>
 
-  <div id="students">
-    <table border="2">
-      <tr>
-        <th>Student</th>
-        <th>Subject</th>
-        <th>Date</th>
-      </tr>
-      <% @enrollments.each do |enrollment| %>
+<div id="students">
+  <table class="table table-striped" border="2">
+    <tr>
+      <th>Student</th>
+      <th>Subject</th>
+      <th>Date</th>
+    </tr>
+    <% @enrollments.each do |enrollment| %>
       <tr>
         <td><%= enrollment.name%></td>
         <td><%= enrollment.Subject %></td>
         <td><%= enrollment.date %></td>
         <td><%= link_to "Show", enrollment %></td>
       </tr>
-    <% end %>
-   </<table>
- </<div>
-
-<br>
+   <% end %>
+  </table>
+</div>
 
 <%= button_to "New enrollment", new_enrollment_path, method: "get" %>

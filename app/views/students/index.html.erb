@@ -3,18 +3,20 @@
 <h1>Students</h1>
 
 <div id="students">
-  <table border="2">
+  <table class="table table-striped" border="2">
     <tr>
       <th>User</th>
       <th>Level</th>
+      <th>Show</th>
     </tr>
-  <% @students.each do |student| %>
-  <tr>
-    <td><%= student.user%></td>
-    <td><%= student.level %></td>
-    <td><%= link_to "Show", student %></td>
-  </tr>
-  <% end %>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.user.name%></td>
+        <td><%= student.level %></td>
+        <td><%= link_to "Show", student %></td>
+      </tr>
+    <% end %>
+  </table>
 </div>
 
 <%= button_to "New student", new_student_path, method: "get" %>

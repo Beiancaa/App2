@@ -13,12 +13,14 @@
 
   <div>
     <%= form.label :student_id, style: "display: block" %>
-    <% form.text_field :student_id %>
+    <%# form.text_field :student_id %>
+    <%= form.collection_select :student_id, Student.all,:id,:id, include_blank: true %>
   </div>
 
   <div>
     <%= form.label :subject_id, style: "display: block" %>
-    <%= form.text_field :subject_id %>
+    <%# form.text_field :subject_id %>
+    <%= form.collection_select :subject_id, Subject.all,:id,:name, include_blank: true %>
   </div>
 
   <div>

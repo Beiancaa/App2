@@ -11,6 +11,6 @@ class User < ApplicationRecord
 
   private
   def create_unique_identifier
-    self.identifier = "SecureRandom.hex(3)-#{time.now.to_i}"
+    self.identifier = SecureRandom.hex(3) + "#{Time.now.to_i}"
   end
 end

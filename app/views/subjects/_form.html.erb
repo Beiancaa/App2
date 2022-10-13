@@ -33,9 +33,10 @@
 
   <div>
     <%= form.label :teacher_id, style: "display: block" %>
-    <%= form.text_field :teacher_id %>
+    <%# form.text_field :teacher_id %>
+    <%= form.collection_select :teacher_id, Teacher.all,:id,:id, include_blank: true %>
   </div>
-
+  <br>
   <div>
     <%= form.submit %>
   </div>

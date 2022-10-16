@@ -9,7 +9,9 @@
       <th>Name</th>
       <th>Year</th>
       <th>Semister</th>
+      <th>Capacity</th>
       <th>Teacher</th>
+      <th>Show</th>
     </tr>
     <% @subjects.each do |subject| %>
       <tr>
@@ -17,7 +19,8 @@
         <td><%= subject.name %></td>
         <td><%= subject.year %></td>
         <td><%= subject.semister %></td>
-        <td><%= subject.teacher %></td>
+        <td><%= subject.capacity %></td>
+        <td><%= subject.teacher_id %></td>
         <td><%= link_to "Show", subject %></td>
       </tr>
     <% end %>

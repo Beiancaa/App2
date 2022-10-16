@@ -19,8 +19,7 @@
 
   <div>
     <%= form.label :subject_id, style: "display: block" %>
-    <%# form.text_field :subject_id %>
-    <%= form.collection_select :subject_id, Subject.all,:id,:name, include_blank: true %>
+    <%= form.collection_select :subject_id, Subject.where(open: true ),:id,:name, include_blank: true %>
   </div>
 
   <div>

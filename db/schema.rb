@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_10_181817) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_16_160235) do
   create_table "enrollments", force: :cascade do |t|
     t.integer "student_id", null: false
     t.integer "subject_id", null: false
@@ -37,6 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_181817) do
     t.integer "teacher_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "capacity"
     t.index ["teacher_id"], name: "index_subjects_on_teacher_id"
   end
 

@@ -32,6 +32,11 @@
   </div>
 
   <div>
+    <%= form.label :capacity, style: "display: block" %>
+    <%= form.number_field :capacity %>
+  </div>
+
+  <div>
     <%= form.label :teacher_id, style: "display: block" %>
     <%# form.text_field :teacher_id %>
     <%= form.collection_select :teacher_id, Teacher.all,:id,:id, include_blank: true %>
